@@ -168,11 +168,11 @@ async def check_approval(c: Alita, m: Message):
         return
     if check_approve:
         await m.reply_text(
-            f"{(await mention_html(user_first_name, user_id))} is an approved user. Locks, antiflood, and blacklists won't apply to them.",
+            f"{(await mention_html(user_first_name, user_id))} является одобренным пользователем.  Блокировки, антифлуд и черные списки на них не распространяются..",
         )
     else:
         await m.reply_text(
-            f"{(await mention_html(user_first_name, user_id))} is not an approved user. They are affected by normal commands.",
+            f"{(await mention_html(user_first_name, user_id))} не является одобренным пользователям. На него действуют обычные наказания.",
         )
     return
 
