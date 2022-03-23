@@ -127,7 +127,7 @@ async def tmute_usr(c: Alita, m: Message):
 @Alita.on_message(command("dtmute") & restrict_filter)
 async def dtmute_usr(c: Alita, m: Message):
     if len(m.text.split()) == 1 and not m.reply_to_message:
-        await m.reply_text("I can't mute nothing!")
+        await m.reply_text("Я не могу никого замьютить!")
         return
 
     if not m.reply_to_message:
@@ -227,7 +227,7 @@ async def dtmute_usr(c: Alita, m: Message):
 @Alita.on_message(command("stmute") & restrict_filter)
 async def stmute_usr(c: Alita, m: Message):
     if len(m.text.split()) == 1 and not m.reply_to_message:
-        await m.reply_text("I can't mute nothing!")
+        await m.reply_text("Я не могу никого замьютить!")
         return
 
     try:
@@ -310,7 +310,7 @@ async def stmute_usr(c: Alita, m: Message):
 @Alita.on_message(command("mute") & restrict_filter)
 async def mute_usr(c: Alita, m: Message):
     if len(m.text.split()) == 1 and not m.reply_to_message:
-        await m.reply_text("I can't mute nothing!")
+        await m.reply_text("Я не могу никого замьютить!")
         return
 
     reason = None
@@ -394,7 +394,7 @@ async def mute_usr(c: Alita, m: Message):
 @Alita.on_message(command("smute") & restrict_filter)
 async def smute_usr(c: Alita, m: Message):
     if len(m.text.split()) == 1 and not m.reply_to_message:
-        await m.reply_text("I can't mute nothing!")
+        await m.reply_text("Я не могу никого замьютить!")
         return
 
     try:
@@ -457,7 +457,7 @@ async def smute_usr(c: Alita, m: Message):
 @Alita.on_message(command("dmute") & restrict_filter)
 async def dmute_usr(c: Alita, m: Message):
     if len(m.text.split()) == 1 and not m.reply_to_message:
-        await m.reply_text("I can't mute nothing!")
+        await m.reply_text("Я не могу никого замьютить!")
         return
     if not m.reply_to_message:
         return await m.reply_text("No replied message and user to delete and mute!")
