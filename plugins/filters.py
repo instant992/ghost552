@@ -102,7 +102,7 @@ async def add_filter(_, m: Message):
     LOGGER.info(f"{m.from_user.id} added new filter ({keyword}) in {m.chat.id}")
     if add:
         await m.reply_text(
-            f"Saved filter for '<code>{', '.join(keyword.split('|'))}</code>' in <b>{m.chat.title}</b>!",
+            f"Новый фильтр '<code>{', '.join(keyword.split('|'))}</code>' был успешно сохранен в чате <b>{m.chat.title}</b>!",
         )
     await m.stop_propagation()
 
