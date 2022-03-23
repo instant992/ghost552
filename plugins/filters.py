@@ -125,7 +125,7 @@ async def stop_filter(_, m: Message):
             db.rm_filter(m.chat.id, m.text.split(None, 1)[1].lower())
             LOGGER.info(f"{m.from_user.id} removed filter ({keyword}) in {m.chat.id}")
             await m.reply_text(
-                f"Okay, I'll stop replying to that filter and it's aliases in <b>{m.chat.title}</b>.",
+                f"Фильтр был успешно удален в чате <b>{m.chat.title}</b>.",
             )
             await m.stop_propagation()
 
