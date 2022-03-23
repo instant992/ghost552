@@ -43,7 +43,7 @@ async def warn(c: Alita, m: Message):
         reason = None
 
     if not len(m.command) > 1 and not m.reply_to_message:
-        await m.reply_text("I can't warn nothing! Tell me user whom I should warn")
+        await m.reply_text("Я не могу выдать варн никому. Ответь на то сообщение кому нужно выдать")
         return
 
     user_id, user_first_name, _ = await extract_user(c, m)
