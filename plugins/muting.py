@@ -27,7 +27,7 @@ from alita.vars import Config
 @Alita.on_message(command("tmute") & restrict_filter)
 async def tmute_usr(c: Alita, m: Message):
     if len(m.text.split()) == 1 and not m.reply_to_message:
-        await m.reply_text("I can't mute nothing!")
+        await m.reply_text("Я не могу никого замьютить!")
         return
 
     try:
