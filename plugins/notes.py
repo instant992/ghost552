@@ -63,7 +63,7 @@ async def save_note(_, m: Message):
     db.save_note(m.chat.id, note_name, text, data_type, content)
     LOGGER.info(f"{m.from_user.id} saved note ({note_name}) in {m.chat.id}")
     await m.reply_text(
-        f"Saved note <code>{note_name}</code>!\nGet it with <code>/get {note_name}</code> or <code>#{note_name}</code>",
+        f"🗒 Заметка <code>{note_name}</code>! была успешно сохранена\nТы можешь получить эту заметку, используя <code>/get {note_name}</code> или <code>#{note_name}</code>",
     )
     return
 
