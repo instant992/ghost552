@@ -206,7 +206,7 @@ async def list_warns(c: Alita, m: Message):
     warns, num_warns = warn_db.get_warns(user_id)
     warn_settings = warn_settings_db.get_warnings_settings()
     if not warns:
-        await m.reply_text("This user has no warns!")
+        await m.reply_text("У этого пользователя нет предупреждений!")
         return
     msg = f"{(await mention_html(user_first_name,user_id))} has <b>{num_warns}/{warn_settings['warn_limit']}</b> warns!\n\n<b>Reasons:</b>\n"
     msg += "\n".join([("- No reason" if i is None else f" - {i}") for i in warns])
