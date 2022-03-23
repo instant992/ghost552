@@ -184,7 +184,7 @@ async def list_warns(c: Alita, m: Message):
         return
 
     if user_id in SUPPORT_STAFF:
-        await m.reply_text("This user has no warns!")
+        await m.reply_text("У этого пользователя нет варнов!")
         LOGGER.info(
             f"{m.from_user.id} trying to check warns of {user_id} (SUPPORT_STAFF) in {m.chat.id}",
         )
